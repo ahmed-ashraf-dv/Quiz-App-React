@@ -1,0 +1,67 @@
+.form {
+  text-align: center;
+  width: 350px;
+  margin: auto;
+}
+
+.form .name {
+  margin-top: 50px;
+}
+
+.form .name input {
+  padding: 8px;
+  font-size: 18px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.form p {
+  margin: 15px 0;
+}
+
+.form .radios {
+  background-color: #fff;
+  padding: 5px;
+  width: 100%;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.form .radios input {
+  display: none;
+}
+
+.form .radios label {
+  border-radius: 3px;
+  padding-block: 10px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  width: calc(100% / 2);
+  background-color: var(--gray);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form .radios label:hover {
+  background-color: var(--selected);
+}
+
+.form .radios input[type="radio"]:checked + label {
+  background-color: var(--selected);
+}
+
+@media (max-width: 512px) {
+  .form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 350px) {
+  .form {
+    width: 60%;
+  }
+}

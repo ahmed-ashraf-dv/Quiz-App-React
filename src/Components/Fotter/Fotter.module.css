@@ -1,0 +1,35 @@
+footer {
+  margin-top: 70vh;
+}
+
+.container {
+  text-align: center;
+  background-color: var(--gray-dark);
+  color: white;
+  padding: 15px;
+}
+
+.container .thx {
+  padding-bottom: 18px;
+}
+
+.container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 30px;
+}
+
+.container ul > :nth-child(1) {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.container ul > svg {
+  width: 150px;
+}
+
+.toTop {
+  margin: 18px 0 10px;
+}

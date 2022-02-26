@@ -1,0 +1,64 @@
+{
+  "en": {
+    "lang": "en",
+    "welcomeMsg": "Welcome",
+    "answer": "Answer the following questions",
+    "numOfQes": "Qestion",
+    "load": "Loading",
+    "next": "Next qestion",
+    "thxFot": "With all Love Made By Ahmed Ashraf (FoR3oN)",
+    "headerTips": [
+      "Write your name",
+      "Answer the questions",
+      ["Share the quiz", "View score"]
+    ],
+    "navUl": ["Quiz", "Scores"],
+    "resulTaple": ["Name", "Score"],
+    "solveQuizMsg": ["You are a", ["God", "Bad"], "Friend With"],
+    "score": "Your score is",
+    "createQuizBtn": "Create your own Quizzes",
+    "share": [
+      "The qestion are over, Quiz has ben ready",
+      "Your quiz link",
+      "Copy",
+      "Copy Link And Share To Your Status",
+      "Copid Is successfully"
+    ],
+    "Errors": [
+      "Please Select Ansar",
+      "please Write Your Name",
+      "please Select Your Gender"
+    ],
+    "form": ["Your name", "Your gender", ["Male", "Female"], "Start"],
+    "emptyScoreMsg": "No scores yet"
+  },
+  "ar": {
+    "lang": "ar",
+    "welcomeMsg": "مرحبا بك يا",
+    "answer": "أجب علي الاسئله التاليه",
+    "numOfQes": "السؤال",
+    "load": "جاري التحميل",
+    "next": "التالي",
+    "thxFot": "صنع بكل حب بواسطه احمد اشرف",
+    "headerTips": [
+      "أدخل اسمك",
+      "أجب علي الاسئله",
+      ["مشاركة الاختبار", "رؤيه نتيجتك"]
+    ],
+    "navUl": ["اختبار", "النتائج"],
+    "resulTaple": ["الاسم", "النتيجه"],
+    "solveQuizMsg": ["انت صديق", ["جيد", "سيئ"], "ل"],
+    "score": "نتيجتك هي",
+    "createQuizBtn": "قم بانشاء الاختبار الخاص بك",
+    "share": [
+      "أنتهت الاسئله والاختبار جاهز الان",
+      "رابط الاختبار الخاص بك",
+      "نسخ",
+      "انسخ الرابط ثم يمكنك إرساله إلى أصدقائك في رسالة أو نشره كحالة أو ستوري",
+      "تم النسخ الي الحافظه"
+    ],
+    "Errors": ["يرجي اختيار اجابه", "يرجي كتابة اسمك", "اختر نوعك"],
+    "form": ["أسمك", "نوعك", ["ذكر", "انثي"], "أبدا"],
+    "emptyScoreMsg": "لا نتائج لك حتي الان"
+  }
+}

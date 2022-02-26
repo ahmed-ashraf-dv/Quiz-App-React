@@ -1,0 +1,19 @@
+.container .livels {
+  padding-block: 10px;
+}
+
+.container p {
+  padding: 5px 0;
+  text-align: end;
+  font-size: 20px;
+  color: var(--mute);
+  transition: .6s;
+}
+
+.container p svg {
+  margin-left: 11px;
+}
+
+.container p.acctive {
+  color: #fff;
+}

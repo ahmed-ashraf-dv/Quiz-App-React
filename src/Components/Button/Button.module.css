@@ -1,0 +1,14 @@
+.btnBrimery {
+  background-color: var(--blue);
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  border: none;
+  transition: 0.6s;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btnBrimery:hover {
+  background-color: #0367d3;
+}

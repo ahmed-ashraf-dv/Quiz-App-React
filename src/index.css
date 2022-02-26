@@ -1,0 +1,178 @@
+:root {
+  --pirple-color: #842b73;
+  --green: #28a745;
+  --dark-green: #2d492c;
+  --blue: #007bff;
+  --selected: #a9d5f5;
+  --red: #dc3545;
+  --gray-dark: #343a40;
+  --gray: #e0e4e9;
+  --mute: #a5adb6;
+  --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--gray);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: var(--main-font);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--gray);
+}
+
+.App {
+  min-height: 105vh;
+}
+
+.circle-Btn {
+  outline: none;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.circle-Btn:hover {
+  background-color: #0367d3;
+}
+
+.circle-Btn.Dark-Btn,
+.circle-Btn.Lang-Btn {
+  position: fixed;
+  bottom: 30px;
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+}
+
+.circle-Btn.Dark-Btn {
+  right: 25px;
+}
+
+.circle-Btn.Lang-Btn {
+  left: 25px;
+}
+
+.Main-Loading {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  position: fixed;
+  inset: 0;
+}
+
+.Main-Loading.stopLoading {
+  animation: stopLoading 1s forwards;
+}
+
+@keyframes stopLoading {
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Dark Mode */
+.darkMode,
+.darkMode input[type="text"] {
+  background-color: #333;
+  color: white;
+}
+
+.darkMode input[type="radio"] + label {
+  background-color: var(--blue);
+}
+
+.ansrasParent input[type="radio"] + label {
+  padding: 25px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkMode input[type="radio"]:checked + label {
+  border-radius: 10px;
+}
+
+.darkMode input[type="radio"]:checked + label,
+.darkMode input[type="radio"] + label:hover {
+  background-color: #054d9b !important;
+}
+
+.darkMode form .radios {
+  background-color: #333 !important;
+  border-radius: 10px !important;
+}
+
+.darkMode .hello > p,
+.darkMode .shareParent p {
+  color: #aeb4bb !important;
+}
+
+.darkMode .shareParent,
+.darkMode .card,
+.darkMode .card01,
+.darkMode .qus article,
+.darkMode header .container01 {
+  background-color: #060606 !important;
+}
+
+.darkMode .table {
+  border-color: white !important;
+}
+
+.darkMode .table tbody {
+  background-color: #202a32 !important;
+}
+
+.darkMode .navContainer {
+  background-color: #4c3448 !important;
+}
+
+.darkMode .navContainer .uls ul li a.acctive {
+  background-color: #954c88 !important;
+}
+
+@media (max-width: 512px) {
+  .card01,
+  table {
+    width: 90% !important;
+  }
+}

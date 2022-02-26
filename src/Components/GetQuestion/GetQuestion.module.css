@@ -1,0 +1,75 @@
+.qus {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+
+.qus .hello {
+  margin: 40px 0 0;
+}
+
+.qus .hello > h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.qus .hello > p {
+  font-size: 18px;
+  color: #4f545a;
+}
+
+.qus .proggres {
+  height: 25px;
+  margin: 20px 0;
+}
+
+.qus article {
+  border: 2px solid var(--red);
+  margin: 15px 0 23px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.qus article > p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.qus article .ansars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.qus article label {
+  border-radius: 3px;
+  padding-block: 25px;
+  background-color: var(--gray);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.qus article label:hover {
+  background-color: var(--selected);
+}
+
+.qus article input {
+  display: none;
+}
+
+.qus article input:checked + label {
+  background-color: var(--selected);
+}
+
+.qus button {
+  width: 300px;
+}
+
+@media (max-width: 512px) {
+  .qus {
+    width: 90%;
+  }
+  .qus button {
+    width: 80%;
+  }
+}
