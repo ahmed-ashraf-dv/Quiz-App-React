@@ -19,12 +19,12 @@ const Fotter = () => {
         <p className={style.thx}>{getTRNS.thxFot}</p>
         <ul>
           <li>
-            <a href="https://www.facebook.com/ForR3oN/" target="_blanc">
+            <a href="https://www.facebook.com/ForR3oN" target="_blanc">
               <FontAwesomeIcon icon={faFacebook} size="2x" color="#2050b3" />
             </a>
           </li>
           <li>
-            <a href="https://github.com/ahmdgun0/" target="_blanc">
+            <a href="https://github.com/ahmed-ashraf-dv" target="_blanc">
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
           </li>
