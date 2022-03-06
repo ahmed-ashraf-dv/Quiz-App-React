@@ -7,13 +7,12 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   // Redux Data
-  const {
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
-  const Dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  const resetLevelHandelar = () => Dispatch(resetLevel());
+  const resetLevelHandelar = () => dispatch(resetLevel());
 
   // Check And Add Acctive Class
   const acctiveClass = ({ isActive }) =>

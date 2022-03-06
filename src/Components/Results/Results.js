@@ -4,9 +4,8 @@ import style from "./Results.module.css";
 
 const Results = () => {
   // Redux Data
-  const {
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
   return (
     <table className={style.table + " table"}>

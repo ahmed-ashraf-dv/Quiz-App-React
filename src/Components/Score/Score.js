@@ -8,9 +8,8 @@ import Results from "../Results/Results";
 
 const Score = ({ score, levelDown }) => {
   // Redux Data
-  const {
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
   return (
     <Fragment>

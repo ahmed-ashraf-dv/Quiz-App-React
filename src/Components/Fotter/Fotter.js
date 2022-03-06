@@ -8,9 +8,8 @@ import Container from "../Container/Container";
 
 const Fotter = () => {
   // Redux Translate
-  const {
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
   const toTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 

@@ -11,11 +11,10 @@ const SignForm = ({ levelUp }) => {
   const [name, setName] = useState("");
 
   // Redux Data
-  const {
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
-  const Dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const formHandelar = (e) => {
     // Stop Reload
@@ -26,7 +25,7 @@ const SignForm = ({ levelUp }) => {
     if (!gender) return Swal.fire("Ops !", getTRNS.Errors[2], "error");
 
     // Get Next Page
-    Dispatch(setUsername(name));
+    dispatch(setUsername(name));
     levelUp();
   };
 

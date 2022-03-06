@@ -1,19 +1,20 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { levelUp } from "../../Store";
+
 import SignForm from "../../Components/signForm/signForm";
 import GetQuestion from "../../Components/GetQuestion/GetQuestion";
 import Share from "../../Components/Share/Share";
-import { useSelector, useDispatch } from "react-redux";
-import { levelUp } from "../../Store";
 
 const BuiltQuiz = () => {
   // Redux Data
   const { userName, level } = useSelector((data) => data);
 
   // Set New Level
-  const Dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   // Set New Level
-  const setViewNumHandelar = () => Dispatch(levelUp());
+  const setViewNumHandelar = () => dispatch(levelUp());
 
   // Set Quiz
   const sendData = (ansars) => {

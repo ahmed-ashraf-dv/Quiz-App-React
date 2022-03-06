@@ -10,9 +10,8 @@ const Share = () => {
   const link = `${protocol}//${host}/1548652`;
 
   // Redux Data
-  const {
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
   // The Alert
   const Toast = Swal.mixin({

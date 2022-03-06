@@ -4,9 +4,8 @@ import style from "./Result.module.css";
 
 const Result = () => {
   // Redux Data
-  const {
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
   return (
     <article className={style.card + " card"}>

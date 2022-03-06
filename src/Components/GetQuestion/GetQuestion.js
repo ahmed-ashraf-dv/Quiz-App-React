@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import SyncLoader from "react-spinners/SyncLoader";
-import { useSelector, useDispatch } from "react-redux";
-import Swal from "sweetalert2";
 import { levelUp } from "../../Store";
+import { useSelector, useDispatch } from "react-redux";
+
+import SyncLoader from "react-spinners/SyncLoader";
+import Swal from "sweetalert2";
 import axios from "axios";
 import Radios from "../Radios/Radios";
 import Button from "../Button/Button";
@@ -10,10 +11,8 @@ import style from "./GetQuestion.module.css";
 
 const SolveQestion = ({ sendData }) => {
   // Redux Data
-  const {
-    userName,
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { userName, lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
   // Memo Array To Save Data
   const result = useMemo(() => [], []);
@@ -34,9 +33,9 @@ const SolveQestion = ({ sendData }) => {
   const ansars = useRef();
 
   // Dispatch
-  const Dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  const setViewNumHandelar = () => Dispatch(levelUp());
+  const setViewNumHandelar = () => dispatch(levelUp());
 
   // Get Qeustion From API
   useEffect(() => {

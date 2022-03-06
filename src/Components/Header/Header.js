@@ -11,10 +11,8 @@ import {
 
 const Header = () => {
   // Redux Data
-  const {
-    level,
-    lang: { getTRNS },
-  } = useSelector((data) => data);
+  const { level, lang } = useSelector((data) => data);
+  const { getTRNS } = lang;
 
   // Levels Handelar
   const levelH = (ownLevel, type) => {

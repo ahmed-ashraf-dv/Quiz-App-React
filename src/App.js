@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, Fragment, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
 import RingLoader from "react-spinners/RingLoader";
@@ -17,13 +18,14 @@ import SolveQuiz from "./Pages/SolveQuiz/SolveQuiz";
 
 function App() {
   // Get Redux Info
-  const {
-    darkMode,
-    lang: { Viewlang, getTRNS },
-  } = useSelector((data) => data);
+  const { darkMode, lang } = useSelector((data) => data);
+  const { Viewlang, getTRNS } = lang;
 
   // Add Dispatch To Constant to Use In Function
-  const Dispatch = useDispatch();
+  const dispatch = useDispatch();
+
+  // Loding Ref
+  const loading = useRef();
 
   // Get Translate
   useEffect(() => {
@@ -32,12 +34,12 @@ function App() {
       const translation = await axios("./FakeData/languages.json");
 
       // Add Trans
-      Dispatch(setTranslate(translation.data[Viewlang]));
+      dispatch(setTranslate(translation.data[Viewlang]));
     };
 
     // Call The getTRANS
     getTRANS();
-  }, [Viewlang, Dispatch]);
+  }, [Viewlang]);
 
   // Create Dark Mode
   const toggleDM = () => {
@@ -45,7 +47,7 @@ function App() {
     localStorage.setItem("darkMode", !darkMode);
 
     // Change State To Dark Mode
-    Dispatch(toggleDarkMode());
+    dispatch(toggleDarkMode());
   };
 
   // Toggle Languages
@@ -54,16 +56,13 @@ function App() {
     localStorage.setItem("Lang", Viewlang === "ar" ? "en" : "ar");
 
     // Change State To Languages
-    Dispatch(toggleLanguages());
+    dispatch(toggleLanguages());
   };
 
-  // Loding Ref
-  const loading = useRef();
-
-  // Remove Loding El
-  if (getTRNS) {
-    setTimeout(() => loading.current.remove(), 1000);
-  }
+  // Remove Loding UI
+  useEffect(() => {
+    getTRNS && setTimeout(() => loading.current.remove(), 1000);
+  }, [getTRNS]);
 
   return (
     <div className={darkMode ? "App darkMode" : "App"}>
